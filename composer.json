@@ -10,6 +10,7 @@
     ],
     "scripts": {
         "post-package-install": [
+            "Tchoblond59\\SSRelay\\Commands\\PostInstall::postPackageInstall",
             "php artisan migrate --package=\"tchoblond59/ssrelay\"",
             "artisan vendor:publish --provider=Tchoblond59\\SSRelay\\SSRelayServiceProvider --tag=public --force"
         ]
