@@ -14,5 +14,9 @@
             "artisan vendor:publish --provider=Tchoblond59\\SSRelay\\SSRelayServiceProvider --tag=public --force"
         ]
     },
+    "autoload": {
+        "psr-4": {
+            "Tchoblond59\\SSRelay\\": "src"
+        },
     "require": {}
 }
