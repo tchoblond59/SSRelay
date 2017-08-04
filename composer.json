@@ -9,7 +9,7 @@
         }
     ],
     "scripts": {
-        "post-update-cmd": [
+        "post-package-install": [
             "php artisan migrate --package=\"tchoblond59/ssrelay\"",
             "artisan vendor:publish --provider=Tchoblond59\\SSRelay\\SSRelayServiceProvider --tag=public --force"
         ]
@@ -20,6 +20,6 @@
         }
     },
     "require": {
-        
+
     }
 }
