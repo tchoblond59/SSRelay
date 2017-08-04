@@ -11,7 +11,7 @@
     "scripts": {
         "post-install-cmd": [
             "php artisan migrate",
-            "artisan vendor:publish --provider=\"Tchoblond59\SSRelay\SSRelayServiceProvider\" --tag=\"public\" --force"
+            "artisan vendor:publish --provider=Tchoblond59\SSRelay\SSRelayServiceProvider --tag=public --force"
         ]
     },
     "require": {}
