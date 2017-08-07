@@ -16,7 +16,7 @@ class SSRelayServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__.'/assets/js' => public_path('/js/tchoblond59/ssrelay'),
-        ], 'public');
+        ], 'larahome-package');
         $this->loadRoutesFrom(__DIR__.'/routes.php');
         $this->loadViewsFrom(__DIR__.'/views', 'ssrelay');
         $this->loadMigrationsFrom(__DIR__.'/migrations');

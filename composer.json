@@ -8,13 +8,6 @@
             "email": "julien.lamandin@gmail.com"
         }
     ],
-    "scripts": {
-        "post-package-update": [
-            "Tchoblond59\\SSRelay\\Commands\\PostInstall::postPackageInstall",
-            "php artisan migrate --package=\"tchoblond59/ssrelay\"",
-            "artisan vendor:publish --provider=Tchoblond59\\SSRelay\\SSRelayServiceProvider --tag=public --force"
-        ]
-    },
     "autoload": {
         "psr-4": {
             "Tchoblond59\\SSRelay\\": "src"
