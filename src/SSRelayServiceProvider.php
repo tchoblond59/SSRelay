@@ -20,7 +20,7 @@ class SSRelayServiceProvider extends ServiceProvider
         $this->loadRoutesFrom(__DIR__.'/routes.php');
         $this->loadViewsFrom(__DIR__.'/views', 'ssrelay');
         $this->loadMigrationsFrom(__DIR__.'/migrations');
-        Event::listen('App\Events\MSMessageEvent', 'Tchoblond59\SSRelay\EventListener\SSRelayEventListener');
+        Event::listen('App\Events\MSMessageEvent', '\Tchoblond59\SSRelay\EventListener\SSRelayEventListener');
     }
 
     /**

@@ -9,7 +9,6 @@ $(function() {
         .listen('.Tchoblond59.SSRelay.Events.SSRelayEvent', function (e) {
             console.log('SSRelayEvent', e)
             $('input.SSRelayWidget').unbind();
-            $('button.SSRelayTemp').closest('form').unbind();
             if(e.state == 1)
             {
                 $('input.SSRelayWidget[data-sensor_id='+e.sensor.id+']').bootstrapToggle('on');
