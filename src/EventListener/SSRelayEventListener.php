@@ -26,7 +26,7 @@ class SSRelayEventListener
      */
     public function handle(MSMessageEvent $event)
     {
-        $sensor = Sensor::where('node_address', '=', $event->message->getNodeId())->where('sensor_address', '=', $event->message->getChildId())->where('classname', '=', 'Tchoblond59\SSRelay\Models\SSRelay')->first();
+        $sensor = Sensor::where('node_address', '=', $event->message->getNodeId())->where('sensor_address', '=', $event->message->getChildId())->where('classname', '=', '\Tchoblond59\SSRelay\Models\SSRelay')->first();
 
         if($sensor && $event->message->getCommand()==1 && $event->message->getType()==2)
         {
