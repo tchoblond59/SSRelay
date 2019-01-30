@@ -1,7 +1,7 @@
 {
     "name": "tchoblond59/ssrelay",
     "description": "Relay Plugin for LaraHome",
-    "license": "",
+    "license": "GPL-3.0-or-later",
     "authors": [
         {
             "name": "Julien Lamandin",
