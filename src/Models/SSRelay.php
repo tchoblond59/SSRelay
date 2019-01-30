@@ -37,7 +37,7 @@ class SSRelay extends Sensor
             $ssrelay_config->save();
         }
 
-        return view('sensors.ssrelay.widget')->with(['widget' => $widget,
+        return view('ssrelay::widget')->with(['widget' => $widget,
         'sensor' => $sensor,
         'state' => $state,
         'ssrelay_config' => $ssrelay_config ]);
