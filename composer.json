@@ -15,5 +15,12 @@
     },
     "require": {
 
+    },
+    "extra": {
+	"laravel": {
+	    "providers": [
+		"Tchoblond59\\SSRelay\\SSRelayServiceProvider"
+	    ]
+	}
     }
 }
