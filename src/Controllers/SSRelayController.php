@@ -26,10 +26,13 @@ class SSRelayController extends Controller
     {
         $widget = Widget::findOrFail($id);
         $sensor = $widget->sensor;
-        $messages = Message::where('node_address', '=', '69')
-            ->where('sensor_address', '=', '1')
+        $messages = Message::where('node_address', '=', $sensor->node_address)
+            ->where('sensor_address', '=', $sensor->sensor_address)
             ->where('command', '=', '1')
+            ->orderBy('created_at', 'desc')
+            ->take(10)
             ->get();
+        //dd($messages);
         $ssrelay_config = SSRelayConfig::where('sensor_id', '=', $sensor->id)->first();
         return view('ssrelay::configwidget')->with(['widget' => $widget,
         'messages' => $messages,
