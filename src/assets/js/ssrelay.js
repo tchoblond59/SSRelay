@@ -6,7 +6,7 @@ $(function() {
     bindSSRelay();
 
     e.channel('chan-relay')
-        .listen('.Tchoblond59.SSRelay.Events.SSRelayEvent', function (e) {
+        .listen('.Tchoblond59\\SSRelay\\Events\\SSRelayEvent', function (e) {
             console.log('SSRelayEvent', e)
             $('input.SSRelayWidget').unbind();
             if(e.state == 1)
