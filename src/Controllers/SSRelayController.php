@@ -2,6 +2,7 @@
 
 namespace Tchoblond59\SSRelay\Controllers;
 
+use App\Command;
 use App\Http\Controllers\Controller;
 use Tchoblond59\SSRelay\Events\SSRelayEvent;
 use App\ScheduledMSCommands;
@@ -87,10 +88,19 @@ class SSRelayController extends Controller
         $command->sensor_id = $sensor->id;
         $command->name = $request->name;
         $command->command = 1; //SET
-        $command->ack = 1; //No Ack
+        $command->ack = 1; //Ack
         $command->type = 2;//V_STATUS Binary
         $command->payload = $request->command;
         $command->save();
+
+        /*Nouvelle commande morphable*/
+        $commande = new Command();
+        $commande->name = $request->name;
+        $commande->commandable_type = MSCommand::class;
+        $commande->commandable_id = $command->id;
+        $commande->enable = true;
+        $commande->save();
+
         return redirect()->back();        
     }
 
